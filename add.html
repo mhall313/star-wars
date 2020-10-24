@@ -63,7 +63,7 @@
   </div>
 
   <script type="text/javascript">
-    // Question: What does this code do?
+    // Question: What does this code do? - takes the users input and saves as newCharacter when the add button is clicked
     $("#add-btn").on("click", function(event) {
       event.preventDefault();
       var newCharacter = {
@@ -73,7 +73,7 @@
         forcePoints: $("#force-points").val().trim()
       };
 
-      // Question: What does this code do??
+      // Question: What does this code do?? - posts newCharacter data to the add.html data and alerts adding character to the user
       $.post("/api/characters", newCharacter)
         .then(function(data) {
           console.log("add.html", data);
